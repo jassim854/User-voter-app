@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1015914863398",
+    "project_id": "flutter-voter-app-5780c",
+    "storage_bucket": "flutter-voter-app-5780c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015914863398:android:7ba3cdb4873a9e421b7fe7",
+        "android_client_info": {
+          "package_name": "com.example.voter_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3QEWwpm3cGRKsfGZDHZbY0TcAUU-KKuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
