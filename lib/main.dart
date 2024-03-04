@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:voter_app/utilis/app_colors.dart';
 import 'package:voter_app/view/auth_/signup_player_view.dart';
 import 'firebase_options.dart';
 void main()async {
@@ -20,6 +22,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+      builder: EasyLoading.init(
+                builder: (context, child) {
+                  EasyLoading.instance
+                    ..indicatorType = EasyLoadingIndicatorType.ring
+                    ..loadingStyle = EasyLoadingStyle.custom
+                    ..indicatorSize = 40
+                    ..radius = 10
+                    ..textColor = AppColor.blackcolor
+                    ..backgroundColor = AppColor.maincolor
+                    ..indicatorColor = AppColor.textfield_color
+                    ..maskColor = AppColor.blackcolor
+                    ..userInteractions = false
+                    ..dismissOnTap = false;
+                  return Container(
+                    child: child,
+                  );
+                },
+              ),
       theme: ThemeData(
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

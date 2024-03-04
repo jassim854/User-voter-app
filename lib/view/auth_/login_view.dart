@@ -140,6 +140,19 @@ class _LoginViewState extends State<LoginView> {
                     //     builder: (context) => const ProfileGecatore())));
                   },
                 ),
+                CustomButton(
+                      color: AppColor.divivdercolor,
+                      height: height * 0.06,
+                      width: width * 0.8,
+                      text: "Login",
+                      style: subTitle16DarkGreyStyle.copyWith(fontSize: 22),
+                      onpressed: () {
+                        Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                              builder: (context) => const LoginView()),
+                          (route) => false,
+                        );
+                      }),
                 const Spacer(),
                 TextButton(
                     onPressed: () {

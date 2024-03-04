@@ -16,7 +16,7 @@ class HomeView extends StatelessWidget {
                       color: AppColor.divivdercolor,
                       height: height * 0.06,
                       width: width * 0.8,
-                      text: "Login",
+                      text: "",
                       style: subTitle16DarkGreyStyle.copyWith(fontSize: 22),
                       onpressed: () {
                         Navigator.of(context).pushAndRemoveUntil(
