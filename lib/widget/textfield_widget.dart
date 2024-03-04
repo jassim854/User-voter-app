@@ -1,5 +1,4 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:voter_app/utilis/app_colors.dart';
 import 'package:voter_app/utilis/app_typography.dart';
@@ -42,7 +41,7 @@ class TextFields extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: maxLines != null
           ? null
           : height ?? MediaQuery.of(context).size.height * 0.055,
@@ -63,21 +62,21 @@ class TextFields extends StatelessWidget {
         validator: validator,
         textAlign: textAligns ?? TextAlign.start,
         decoration: InputDecoration(
-            contentPadding: EdgeInsets.only(left: 15, top: 20),
+            contentPadding: const EdgeInsets.only(left: 15, top: 20),
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(25.0)),
             filled: true,
             fillColor: AppColor.textfield_color,
             suffixIcon: suffixicon,
-            errorBorder: UnderlineInputBorder(
+            errorBorder: const UnderlineInputBorder(
                 borderSide: BorderSide(color: AppColor.refusecolor)),
-            focusedErrorBorder: UnderlineInputBorder(
+            focusedErrorBorder: const UnderlineInputBorder(
                 borderSide: BorderSide(color: AppColor.refusecolor)),
-            enabledBorder: OutlineInputBorder(
+            enabledBorder: const OutlineInputBorder(
                 borderSide: BorderSide.none,
                 gapPadding: 0,
                 borderRadius: BorderRadius.all(Radius.circular(20))),
-            focusedBorder: OutlineInputBorder(
+            focusedBorder: const OutlineInputBorder(
                 borderSide: BorderSide.none,
                 gapPadding: 0,
                 borderRadius: BorderRadius.all(Radius.circular(20))),

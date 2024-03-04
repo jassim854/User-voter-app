@@ -57,6 +57,7 @@ class BaseHelper {
   }
 
   static Future<File?> imagePickerSheet(context) {
+    // ignore: unused_local_variable, prefer_typing_uninitialized_variables
     late var imageVar;
     return showModalBottomSheet(
         context: context,
@@ -112,6 +113,7 @@ class BaseHelper {
   }
 
   static Future<File?> onCameraTap(context, ImageSource source) {
+    // ignore: invalid_use_of_visible_for_testing_member
     return ImagePicker.platform
         .getImageFromSource(source: source)
         .then((value) {
@@ -121,6 +123,7 @@ class BaseHelper {
       } else {
         BaseHelper.showSnackBar(context, 'Please Select any file');
       }
+      return null;
     });
   }
 }

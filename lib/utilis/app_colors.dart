@@ -18,7 +18,7 @@ abstract class AppColor {
   static const Color divivdercolor = Color(0xffE5FD78);
   static const Color    NOcolor = Color(0xffFC4F7C);
     static const Color maincolor = Color(0xff666672);
-  static const Color choicecolor = Color(0xffD5703);
+  static const Color choicecolor = Color(0x0ffd5703);
     static const Color containbackgeround = Color(0xff93939B);
         static const Color searchcolor = Color(0xfff5f6f0);
 

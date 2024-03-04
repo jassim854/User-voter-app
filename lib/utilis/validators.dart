@@ -1,6 +1,4 @@
-import 'dart:developer';
 
-import 'package:intl/intl.dart';
 
 class Validators {
   static String? validateField(

@@ -146,9 +146,9 @@ class _LoginViewState extends State<LoginView> {
                       Navigator.of(context).push((MaterialPageRoute(
                           builder: (context) => const RecoverPassword())));
                     },
-                    child:  Text(
+                    child:  const Text(
                      "Forgot Password",
-                      style: const TextStyle(color: AppColor.maincolor),
+                      style: TextStyle(color: AppColor.maincolor),
                     ))
               ],
             ),

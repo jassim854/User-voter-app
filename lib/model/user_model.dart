@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 
 class 
@@ -70,23 +69,23 @@ UserModel {
   
     return UserModel(
 
-        name: data?["name"] ??= "",
+        name: data["name"] ??= "",
    
-        city: data?["city"] ??= "",
-        gender: data?["gender"] ??= "",
+        city: data["city"] ??= "",
+        gender: data["gender"] ??= "",
 
-        dob: data?["dob"] ??= "",
-        email: data?["email"] ??= "",
+        dob: data["dob"] ??= "",
+        email: data["email"] ??= "",
 
     
-        profilePhoto: data?["profilePhoto"] ??= "",
+        profilePhoto: data["profilePhoto"] ??= "",
  
-        deviceToken: data?['device_token'] ??= "",
-        status: data?['status'] ??= "",
-        password: data?["password"] ??= "",
-        address: data?["address"] ??= "",
+        deviceToken: data['device_token'] ??= "",
+        status: data['status'] ??= "",
+        password: data["password"] ??= "",
+        address: data["address"] ??= "",
     
-        phoneNumber: data?["phoneNumber"] ??= '');
+        phoneNumber: data["phoneNumber"] ??= '');
       
   }
 }

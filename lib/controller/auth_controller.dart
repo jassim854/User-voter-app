@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 import 'dart:io';
 
 
@@ -19,7 +18,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:uuid/uuid.dart';
 import 'package:voter_app/helper/basehelper.dart';
 
-import 'package:voter_app/model/user_model.dart';
 import 'package:voter_app/view/home_view.dart';
 
 import '../Firebase/firebase_methods.dart';
