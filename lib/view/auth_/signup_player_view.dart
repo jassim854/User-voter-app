@@ -2,16 +2,15 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-
 import 'package:intl/intl.dart';
 import 'package:voter_app/utilis/app_colors.dart';
 import 'package:voter_app/utilis/app_typography.dart';
 import 'package:voter_app/utilis/validators.dart';
+import 'package:voter_app/view/auth_/login_view.dart';
 import 'package:voter_app/widget/app_bar_widget.dart';
 import 'package:voter_app/widget/circle_imagw_widget.dart';
 import 'package:voter_app/widget/custom_button_widget.dart';
 import 'package:voter_app/widget/custom_radio_button.dart';
-
 
 import '../../controller/auth_controller.dart';
 import '../../helper/basehelper.dart';
@@ -90,11 +89,7 @@ class _SignupPlayerViewState extends State<SignupPlayerView> {
         return Future.value(true);
       },
       child: Scaffold(
-        appBar: AppBarWidget(
-          background: Colors.transparent,
-          title:"Sign Up"
-             
-        ),
+        appBar: AppBarWidget(background: Colors.transparent, title: "Sign Up"),
         body: SingleChildScrollView(
           padding:
               const EdgeInsets.only(left: 30, right: 30, top: 80, bottom: 20),
@@ -110,7 +105,6 @@ class _SignupPlayerViewState extends State<SignupPlayerView> {
                       CustomCircleAvatar(
                         radius: 60,
                         images: "ImagePath.loginlogo,",
-                        
                         imageUrl: imageUrl,
                       ),
                       Positioned(
@@ -151,7 +145,7 @@ class _SignupPlayerViewState extends State<SignupPlayerView> {
                   Padding(
                     padding: const EdgeInsets.only(top: 40, bottom: 10),
                     child: TextFields(
-                      text:"Enter first and last name",
+                      text: "Enter first and last name",
                       controller: nameController,
                       onChanged: (va) {
                         if (va.toString().isNotEmpty) {
@@ -166,7 +160,7 @@ class _SignupPlayerViewState extends State<SignupPlayerView> {
                   Padding(
                     padding: const EdgeInsets.only(top: 10, bottom: 10),
                     child: TextFields(
-                      text:"Enter Email",
+                      text: "Enter Email",
                       controller: emailController,
                       onChanged: (va) {
                         if (va.toString().isNotEmpty) {
@@ -181,7 +175,7 @@ class _SignupPlayerViewState extends State<SignupPlayerView> {
                   Padding(
                     padding: const EdgeInsets.only(top: 10, bottom: 10),
                     child: TextFields(
-                      text:"Enter Password",
+                      text: "Enter Password",
                       controller: passwordController,
                       obsecureText: obsecureVar,
                       onChanged: (va) {
@@ -212,7 +206,6 @@ class _SignupPlayerViewState extends State<SignupPlayerView> {
                       controller: dobController,
                       text: "Select DOB",
                       readOnly: true,
-                    
                       onTap: () async {
                         final date = await BaseHelper.datePicker(context,
                             initialDate: initialDate);
@@ -273,8 +266,7 @@ class _SignupPlayerViewState extends State<SignupPlayerView> {
                       ),
                     ],
                   ),
-                
-               
+
                   const SizedBox(
                     height: 53,
                   ),
@@ -286,24 +278,36 @@ class _SignupPlayerViewState extends State<SignupPlayerView> {
                       style: subTitle16DarkGreyStyle.copyWith(fontSize: 22),
                       onpressed: () {
                         if (formKey.currentState!.validate()) {
-                          Auth.signUp(context,
-                              city: cityController.text,
-                              dob: dobController.text,
-                              email: emailController.text.toLowerCase().trim(),
-                           
-                              genderRadio: genderRadio.toString(),
-                              imageUrl: imageUrl.toString(),
-                              name: nameController.text,
-                              password: passwordController.text.trim(),
-                            
-                              );
+                          Auth.signUp(
+                            context,
+                            city: cityController.text,
+                            dob: dobController.text,
+                            email: emailController.text.toLowerCase().trim(),
+                            genderRadio: genderRadio.toString(),
+                            imageUrl: imageUrl.toString(),
+                            name: nameController.text,
+                            password: passwordController.text.trim(),
+                          );
                         } else {
                           return;
                         }
                       }),
                   const SizedBox(
                     height: 30,
-                  )
+                  ),
+                  CustomButton(
+                      color: AppColor.divivdercolor,
+                      height: height * 0.06,
+                      width: width * 0.8,
+                      text: "Login",
+                      style: subTitle16DarkGreyStyle.copyWith(fontSize: 22),
+                      onpressed: () {
+                        Navigator.of(context).pushAndRemoveUntil(
+                          MaterialPageRoute(
+                              builder: (context) => const LoginView()),
+                          (route) => false,
+                        );
+                      }),
                 ],
               ),
             ),
