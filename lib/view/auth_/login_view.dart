@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:voter_app/utilis/app_colors.dart';
 import 'package:voter_app/utilis/app_typography.dart';
 import 'package:voter_app/utilis/validators.dart';
+import 'package:voter_app/view/auth_/signup_player_view.dart';
 import 'package:voter_app/widget/app_bar_widget.dart';
 import 'package:voter_app/widget/custom_button_widget.dart';
 import 'package:voter_app/widget/textfield_widget.dart';
@@ -141,15 +142,14 @@ class _LoginViewState extends State<LoginView> {
                   },
                 ),
                 CustomButton(
-                      color: AppColor.divivdercolor,
-                      height: height * 0.06,
-                      width: width * 0.8,
-                      text: "Login",
-                      style: subTitle16DarkGreyStyle.copyWith(fontSize: 22),
+                  style: subTitle16lightGreenstyle,
+                  height: height * 0.06,
+                  width: width * 0.8,
+                  text: "Sign up",
                       onpressed: () {
                         Navigator.of(context).pushAndRemoveUntil(
                           MaterialPageRoute(
-                              builder: (context) => const LoginView()),
+                              builder: (context) => const SignupPlayerView()),
                           (route) => false,
                         );
                       }),

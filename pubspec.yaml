@@ -47,7 +47,7 @@ dependencies:
   cached_network_image: ^3.3.1
   http: ^1.2.0
   # qr_scanner_with_effect: ^1.0.5
-  qr_code_scanner: ^1.0.1
+  # qr_code_scanner: ^1.0.1
   # qr_scanner_with_effect: ^1.0.5
 
 dev_dependencies:
